@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     background: #000;
     color: yellow;
+    font-family: 'Sintony', sans-serif;
 }
 .background {
     position: fixed;
@@ -37,11 +38,13 @@ body {
     position: fixed;
     bottom: -300px;
     right: 100px;
+    z-index: -20;
 }
 .chewy {
     position: fixed;
     bottom: 0;
     left: 350px;
+    z-index: -10;
 }
 /*============TOP==================*/
 .top {
@@ -60,8 +63,105 @@ body {
     text-align: center;
     padding-bottom: 10px;
 }
-/*==============================*/
-/*==============================*/
+/*===========MIDDLE===================*/
+.middle {
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.493);
+    border: solid 2px yellow;
+    border-radius: 15px;
+    box-shadow: 0 0 20px yellow, inset 0 0 20px yellow;
+    padding: 20px;
+    margin-top: 40px;
+}
+.interact h2 {
+    font-size: 30pt;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.interact p {
+    font-size: 22pt;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.header h2{
+    font-size: 32pt;
+}
+.char-select {
+    width: 90%;
+    height: 480px;
+    border: solid 2px yellow;
+    border-radius: 15px;
+    box-shadow: 0 0 20px yellow, inset 0 0 20px yellow;
+}
+.character {
+    width: 20%;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.651);
+    float: left;
+    margin-left: 20px;
+    padding: 20px;
+    border: solid 2px red;
+    border-radius: 15px;
+    box-shadow: 0 0 20px red, inset 0 0 20px red;
+
+}
+.character:hover {
+    border: solid 2px yellow;
+    box-shadow: 0 0 20px yellow, inset 0 0 20px yellow;
+    cursor: pointer;
+}
+.character h3 {
+    font-size: 18pt;
+    text-align: center;
+}
+.char-contain {
+    margin: 0 auto;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.char-info {
+    margin-top: -60px;
+    text-align: center;
+}
+.char-info li {
+    list-style: none;
+}
+/*============BOTTOM==================*/
+.bottom {
+    width: 90%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.589);
+    position: fixed;
+    bottom: 0;
+    left: 5%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top: solid 2px yellow;
+    border-right: solid 2px yellow;
+    border-left: solid 2px yellow;
+}
+.start-button {
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 24.5px;
+}
+.btn-begin {
+    width: 150px;
+    height: 50px;
+    background: yellow;
+    color: #000;
+    border: solid 2px #000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px red;
+    margin: 0 auto;
+}
+.btn-begin:hover {
+    background: #000;
+    color: red;
+    cursor: pointer;
+}
 /*==============================*/
 /*==============================*/
 /*==============================*/
