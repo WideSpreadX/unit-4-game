@@ -1,3 +1,78 @@
+let GameManager = {
+    setGameStart: function (classType) {
+        this.resetPlayer(classType);
+        this.setPreFight();
+    },
+    resetPlayer: function (classType) {
+        switch (classType) {
+            case "yoda":
+                player = new player(classType, 200, 200, 50, 125, 100);
+                break;
+            case "luke":
+                player = new player(classType, 200, 150, 100, 100, 150);
+                break;
+            case "chewy":
+                player = new player(classType, 200, 200, 75, 150, 75);
+                break;
+            case "solo":
+                player = new player(classType, 200, 175, 75, 150, 50);
+                break;
+
+        }
+        let getInterface = document.querySelector(".char-select");
+        getInterface.innerHTML = '<img src="./assets/images/' + classType.toLowerCase() + '.png" class="img-avatar"><div><h3>' + classType
+            + '<h/3><p>Health: ' + player.health + '</p><p>Strength: ' + player.strength + '</p><p>Defense: ' + player.defense + '</p><p>Recovery: ' + player.recovery + '</p></div>';
+    },
+    setPreFight: function () {
+        let getHeader = document.querySelector(".header");
+        let getActions = document.querySelector(".actions");
+        let getArena = document.querySelector(".arena");
+        getHeader.innerHTML = '<p>Task: Find an enemy!</p>';
+        getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="GameManager.setFight()">Search for enemy!</a>';
+        getArena.style.visibility = "visible";
+    },
+    setFight: function () {
+        let getHeader = document.querySelector(".header");
+        let getActions = document.querySelector(".actions");
+        let getEnemy = document.querySelector(".enemy");
+        // Create Enemy
+        let enemy00 = new Enemy("Darth Vader", 200, 175, 100, 125, 75);
+        let enemy01 = new Enemy("Stormtrooper", 200, 75, 125, 125, 75);
+        let enemy02 = new Enemy("Boba Fett", 200, 125, 175, 100, 50);
+        let enemy03 = new Enemy("Dark Sith", 200, 175, 100, 125, 75);
+        let chooseRandomEnemy = Math.floor
+    }
+}
+
+let player;
+function Player(classType, health, speed, strength, defense, recovery) {
+    this.classType = classType;
+    this.health = health;
+    this.speed = speed;
+    this.strength = strength;
+    this.defense = defense;
+    this.recovery = recovery;
+}
+let goodGuy;
+function goodGuy(classType, health, speed, strength, defense, recovery) {
+    this.classType = classType;
+    this.health = health;
+    this.speed = speed;
+    this.strength = strength;
+    this.defense = defense;
+    this.recovery = recovery;
+}
+let badGuy;
+function badGuy(classType, health, speed, strength, defense, recovery) {
+    this.classType = classType;
+    this.health = health;
+    this.speed = speed;
+    this.strength = strength;
+    this.defense = defense;
+    this.recovery = recovery;
+}
+//mine
+
 //--------------VARIABLES------------
 var goodGuy = {
     name: "",
@@ -24,6 +99,7 @@ var badGuy = {
 //----SHOW CHARACTERS
 //CHOOSE CHARACTER
 var rebels = ["Yoda", "Luke Skywalker", "Chewbacha", "Han Solo"];
+console.log(rebels);
 //----SHOW START BUTTON
 //------------ WHEN START BUTTON IS CLICKED
 //CHOOSE OPPONENT
@@ -44,6 +120,8 @@ var yoda = {
     defense: 100,
     recovery: 125
 }
+
+
 //------------ LUKE SKYWALKER
 //STRENGTH: 150 - SPEED: 100 - DEFENSE: 100 - RECOVERY: 150
 var luke = {
@@ -66,10 +144,10 @@ var chewy = {
 //STRENGTH: 175 - SPEED: 75 - DEFENSE: 150 - RECOVERY: 50
 var solo = {
     name: "Han Solo",
-    strength: ,
-    speed: ,
-    defense: ,
-    recovery:
+    strength: 175,
+    speed: 75,
+    defense: 150,
+    recovery: 50
 }
 //------------ ENEMIES
 //------------ BOBA FETT
@@ -93,21 +171,26 @@ var troop = {
 //------------ DARK SITH
 //STRENGTH: 200 - SPEED: 75 - DEFENSE: 100 - RECOVERY: 100
 var sith = {
-    name: ,
-    strength: ,
-    speed: ,
-    defense: ,
-    recovery:
+    name: "Dark Sith",
+    strength: 200,
+    speed: 75,
+    defense: 100,
+    recovery: 100
 }
 //------------ DARTH VADER
 //STRENGTH: 200 - SPEED: 100 - DEFENSE: 100 - RECOVERY: 75
 var darth = {
-    name: ,
-    strength: ,
-    speed: ,
-    defense: ,
-    recovery:
+    name: "Darth Vader",
+    strength: 200,
+    speed: 100,
+    defense: 100,
+    recovery: 75
 }
+    //======================FIGHT TIME========================
+    //=======Variable Attributes Subtracting From Eachother================================
+    /*for*/
+    (rebels() - darkSide()) - lifeRemain === life(?)
+
 //------------ WHEN FIGHT IS OVER
 //----IF WIN
 //CONTINUE
