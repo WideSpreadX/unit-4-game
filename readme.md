@@ -6,7 +6,7 @@ yadi yada yada
 
 1.  You begin at the start screen where you are presented with directions on how to play the game.
 
-2.  Screen 2 will be where a user is prompted to choose their character ("Yoda", "Luke Skywalker", "Chewbacha", "Han Solo") of choice.  Each character with have different characteristics values from Strength, Speed, Defence, Recovery and Power-Ups.  Each character will be given a Health meter which will always start at 100 for every character no matter a choice character or an enemy character.
+2.  Screen 2 will be where a user is prompted to choose their character ("Yoda", "Luke Skywalker", "Chewbacha", "Han Solo") of choice.  Each character with have different characteristics values from Strength, Speed, Defense, Recovery and Power-Ups.  Each character will be given a Health meter which will always start at 100 for every character no matter a choice character or an enemy character.
 
 3.  Screen 3 will show you who your enemy ("Stormtrooper", "Boba Fett", "Dark Sith", "Darth Vader") will be during battle and show their characteristics.  Enemy characters will be chosen at random.
 

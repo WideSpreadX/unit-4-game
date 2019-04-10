@@ -42,9 +42,15 @@ body {
 }
 .chewy {
     position: fixed;
-    bottom: 0;
-    left: 350px;
+    bottom: -60px;
+    left: 500px;
     z-index: -10;
+}
+.music {
+    opacity: 0;
+    width: 100px;
+    height: 200px;
+    background: blue;
 }
 /*============TOP==================*/
 .top {
@@ -68,9 +74,9 @@ body {
     width: 90%;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.493);
-    border: solid 2px yellow;
+    /*border: solid 2px yellow;*/
     border-radius: 15px;
-    box-shadow: 0 0 20px yellow, inset 0 0 20px yellow;
+    /*box-shadow: 0 0 20px yellow, inset 0 0 20px yellow;*/
     padding: 20px;
     margin-top: 40px;
 }
@@ -110,6 +116,8 @@ body {
     border: solid 2px yellow;
     box-shadow: 0 0 20px yellow, inset 0 0 20px yellow;
     cursor: pointer;
+    background: rgba(255, 255, 0, 0.473);
+    color: #000;
 }
 .character h3 {
     font-size: 18pt;
