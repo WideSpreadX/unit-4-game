@@ -9,16 +9,16 @@ let gameManager = {
         switch (classType) {
             //Switches characters within my interface class
             case "Yoda":
-                player = new Player(classType, 200, 175, 150, 200);
+                player = new Player(classType, 200, 175, 150, 200, 150, 100);
                 break;
             case "Luke":
-                player = new Player(classType, 200, 150, 100, 150);
+                player = new Player(classType, 200, 150, 100, 150, 100);
                 break;
             case "Chewy":
-                player = new Player(classType, 200, 175, 125, 150);
+                player = new Player(classType, 200, 175, 125, 150, 75);
                 break;
             case "Solo":
-                player = new Player(classType, 200, 125, 175, 150);
+                player = new Player(classType, 200, 125, 175, 150, 100);
                 break;
         }
         let getInterface = document.querySelector(".interface");
@@ -38,8 +38,8 @@ let gameManager = {
         let getActions = document.querySelector(".actions");
         let getEnemy = document.querySelector(".enemy");
         //Create Enemy
-        let enemy00 = new Enemy("darth", 200, 125, 100, 125);
-        let enemy01 = new Enemy("fett", 200, 100, 75, 150);
+        let enemy00 = new Enemy("darth", 200, 125, 100, 125, 125);
+        let enemy01 = new Enemy("fett", 200, 100, 75, 150, 75);
         let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(2));
         console.log(chooseRandomEnemy);
 
@@ -53,7 +53,7 @@ let gameManager = {
         }
         getHeader.innerHTML = '<p>Attack!</p>';
         getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="PlayerMoves.calcAttack()">Attack!</a>';
-        getEnemy.innerHTML = '<img src="./assets/images/enemies/' + enemy.enemyType + '.png" class="img-avatar"' + enemy.enemyType + '"class="img-avatar"><div><h3>' + enemy.enemyType + '</h3><p>Health: ' + enemy.health + '</p><p>Mana: ' + enemy.mana + '</p><p>Strength: ' + enemy.strength + '</p><p>Agility: ' + enemy.agaility + '</p><p>Speed: ' + enemy.speed + '</p></div>';
+        getEnemy.innerHTML = '<img src="./assets/images/enemies/' + enemy.enemyType + '.png" class="img-avatar"' + enemy.enemyType + '"class="img-avatar"><div><h3>' + enemy.enemyType + '</h3><p class="health-enemy">Health: ' + enemy.health + '</p><p>Mana: ' + enemy.mana + '</p><p>Strength: ' + enemy.strength + '</p><p>Agility: ' + enemy.agaility + '</p><p>Speed: ' + enemy.speed + '</p></div>';
 
     }
 }

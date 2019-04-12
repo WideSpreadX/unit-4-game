@@ -112,6 +112,9 @@ body {
     box-shadow: 0 0 20px red, inset 0 0 20px red;
 
 }
+.img-avatar {
+    width: 200px;
+}
 .character:hover {
     border: solid 2px yellow;
     box-shadow: 0 0 20px yellow, inset 0 0 20px yellow;
