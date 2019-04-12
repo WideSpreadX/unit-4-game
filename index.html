@@ -7,13 +7,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
-    <script src="./assets/javascript/game.js">
+    <!--<script src="./assets/javascript/game.js">-->
 
     </script>
+    <script src="./assets/javascript/gamemanager.js"></script>
+    <script src="./assets/javascript/player.js"></script>
+    <script src="./assets/javascript/enemy.js"></script>
     <title>Star Wars</title>
 </head>
 
 <body>
+    <div class="header">
+        <p>Play the greatest RPG ever to be made!</p>
+        <h2>Choose your character</h2>
+    </div>
+    <div class="interface">
+        <a href="#" onclick="gameManager.setGameStart('Yoda')">
+            <img src="./assets/images/player/yoda.png" alt="Yoda">
+            <div>
+                <h3>Yoda</h3>
+                <p>Don't mess with this guy. He may look old... not so much!</p>
+            </div>
+        </a>
+        <a href="#" onclick="gameManager.setGameStart('Luke')">
+            <img src="./assets/images/player/luke.png" alt="Luke Skywalker">
+            <div>
+                <h3>Luke Skywalker</h3>
+                <p>Young, dumb, and full of Force!</p>
+            </div>
+        </a>
+        <a href="#" onclick="gameManager.setGameStart('Chewy')">
+            <img src="./assets/images/player/chewy.png" alt="Chewbacha">
+            <div>
+                <h3>Chewbacha</h3>
+                <p>Bigfoot??</p>
+            </div>
+        </a>
+        <a href="#" onclick="gameManager.setGameStart('Solo')">
+            <img src="./assets/images/player/solo.png" alt="Han Solo">
+            <div>
+                <h3>Han Solo</h3>
+                <p>You call him Docta Jones Lady!</p>
+            </div>
+        </a>
+
+    </div>
+    <div class="actions">
+
+    </div>
+    <div class="arena">
+
+    </div>
+    <div class="enemy">
+
+    </div>
+    <!--
+
     <img class="background" src="./assets/images/background.jpg" alt="Star Wars Background">
     <div class="top">
         <div class="logo">
@@ -39,7 +88,7 @@
 
             <div class="char-selcet">
                 <a href="#">
-                    <img width="200px" class="chewbacha" src="./assets/images/yoda.png" alt="Chewbacha">
+                    <img width="200px" class="chewbacha" src="./assets/images/player/yoda.png" alt="Chewbacha">
                     <div>
                         <h3>Yoda</h3>
                         <p>Yoda is the all wise master of the Universe</p>
@@ -66,62 +115,58 @@
                         <p>Yoda is the all wise master of the Universe</p>
                     </div>
                 </a>
-                <div class="character">
-                    <h3>Yoda</h3>
-                    <div class="char-contain">
-                        <img width="200px" class="chewbacha" src="./assets/images/yoda.png" alt="Chewbacha">
-                    </div>
-                    <ul class="char-info">
-                        <li>Strength: 200</li>
-                        <li>Speed: 50</li>
-                        <li>Defense: 125</li>
-                        <li>Recovery: 100</li>
-                    </ul>
+            <div class="character">
+                <h3>Yoda</h3>
+                <div class="char-contain">
+                    <img width="200px" class="chewbacha" src="./assets/images/player/yoda.png" alt="Chewbacha">
                 </div>
-                <div class="character">
-                    <h3>Luke Skywalker</h3>
-                    <div class="char-contain">
-                        <img width="200px" class="chewbacha" src="./assets/images/luke.png" alt="Chewbacha">
-                    </div>
-                    <ul class="char-info">
-                        <li>Strength: 150</li>
-                        <li>Speed: 100</li>
-                        <li>Defense: 100</li>
-                        <li>Recovery: 150</li>
-                    </ul>
-                </div>
-                <div class="character">
-                    <h3>Chewbacha</h3>
-                    <div class="char-contain">
-                        <img width="200px" class="chewbacha" src="./assets/images/chewy.png" alt="Chewbacha">
-                    </div>
-                    <ul class="char-info">
-                        <li>Strength: 200</li>
-                        <li>Speed: 75</li>
-                        <li>Defense: 150</li>
-                        <li>Recovery: 75</li>
-                    </ul>
-                </div>
-                <div class="character">
-                    <h3>Jonny Olo</h3>
-                    <div class="char-contain">
-                        <img width="200px" height="350px" class="chewbacha" src="./assets/images/jonnyo.png"
-                            alt="Chewbacha">
-                    </div>
-                    <ul class="char-info">
-                        <li>Strength: 175</li>
-                        <li>Speed: 75</li>
-                        <li>Defense: 150</li>
-                        <li>Recovery: 50</li>
-                    </ul>
-                </div>
+                <ul class="char-info">
+                    <li>Strength: 200</li>
+                    <li>Speed: 50</li>
+                    <li>Defense: 125</li>
+                    <li>Recovery: 100</li>
+                </ul>
             </div>
-        </div>
-        <!--</div>
-    <div class="bottom">
-        <div class="start-button">
-            <button class="btn-begin">Begin Battle</button>
+            <div class="character">
+                <h3>Luke Skywalker</h3>
+                <div class="char-contain">
+                    <img width="200px" class="chewbacha" src="./assets/images/player/luke.png" alt="Chewbacha">
+                </div>
+                <ul class="char-info">
+                    <li>Strength: 150</li>
+                    <li>Speed: 100</li>
+                    <li>Defense: 100</li>
+                    <li>Recovery: 150</li>
+                </ul>
+            </div>
+            <div class="character">
+                <h3>Chewbacha</h3>
+                <div class="char-contain">
+                    <img width="200px" class="chewbacha" src="./assets/images/player/chewy.png" alt="Chewbacha">
+                </div>
+                <ul class="char-info">
+                    <li>Strength: 200</li>
+                    <li>Speed: 75</li>
+                    <li>Defense: 150</li>
+                    <li>Recovery: 75</li>
+                </ul>
+            </div>
+            <div class="character">
+                <h3>Han Solo</h3>
+                <div class="char-contain">
+                    <img width="200px" height="350px" class="chewbacha" src="./assets/images/player/solo.png"
+                        alt="Chewbacha">
+                </div>
+                <ul class="char-info">
+                    <li>Strength: 175</li>
+                    <li>Speed: 75</li>
+                    <li>Defense: 150</li>
+                    <li>Recovery: 50</li>
+                </ul>
+            </div>
         </div>-->
+    </div>
+
 
     </div>
     <!-- <div class="music">

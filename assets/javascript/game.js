@@ -58,7 +58,7 @@ let GameManager = {
         }
         getHeader.innerHTML = '<p>Task: Choose your move</p>';
         getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="PlayerMoves.calcAttack()">Attack!</a>';
-        getEnemy.innerHTML = '<img src="./assets/images/' + enemy.enemyType.toLowerCase() + '.png" alt="' + enemy.enemyType + ''
+        getEnemy.innerHTML = '<img src="./assets/images/' + enemy.enemyType.toLowerCase() + '.png" alt="' + enemy.enemyType + '
             + < div > <h3>' + enemy.enemyType + '</h3> <p class="char-select">
                 class="health-enemy">Health: ' + enemy.health + '</p> <p>Strength: ' +
         enemy.strength + '</p> <p>Speed: ' + enemy.speed + '</p></div >;
@@ -142,7 +142,7 @@ let PlayerMoves = {
     }
 }
 let goodGuy;
-function goodGuy(classType, health, speed, strength, defense, recovery) {
+function GoodGuy(classType, health, speed, strength, defense, recovery) {
     this.classType = classType;
     this.health = health;
     this.speed = speed;
@@ -151,7 +151,7 @@ function goodGuy(classType, health, speed, strength, defense, recovery) {
     this.recovery = recovery;
 }
 let badGuy;
-function badGuy(classType, health, speed, strength, defense, recovery) {
+function BadGuy(classType, health, speed, strength, defense, recovery) {
     this.classType = classType;
     this.health = health;
     this.speed = speed;
