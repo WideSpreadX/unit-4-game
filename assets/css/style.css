@@ -173,9 +173,64 @@ body {
     color: red;
     cursor: pointer;
 }
-/*==============================*/
-/*==============================*/
-/*==============================*/
+/*===========NEW STYLE START HERE===================*/
+/*=========HEADER=============*/
+.header {
+    width: 100%;
+}
+.logo-holder {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.star-logo {
+    width: 500px;
+    margin: 0 auto;
+}
+h2 {
+    padding-bottom: 20px;
+    margin-left: 40px;
+}
+
+
+/*==============INTERFACE================*/
+.interface {
+    width: 100%;
+}
+/*============CHARACTERS==================*/
+.character-box {
+    float: left;
+    width: 20%;
+    height: 500px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: solid 2px yellow;
+    border-radius: 15px;
+    box-shadow: 0 0 20px yellow, inset 0 0 20px yellow;
+}
+.character-box:hover {
+    cursor: pointer;
+    border: solid 2px red;
+    box-shadow: 0 0 20px red, inset 0 0 20px red;
+}
+.character-box a {
+    text-decoration: none;
+    color: yellow;
+    text-shadow: 0 0 6px #fff;
+}
+.char-holder {
+    width: 200px;
+    margin: 0 auto;
+}
+.character-box h3 {
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 /*==============================*/
 /*==============================*/
 /*==============================*/

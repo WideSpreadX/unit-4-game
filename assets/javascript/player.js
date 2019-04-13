@@ -55,10 +55,9 @@ let PlayerMoves = {
             alert("You hit " + playerAttackValues[0] + " damage " + playerAttackValues[1] + " times.");
             if (enemy.health <= 0) {
                 alert("Win You Do");
-                getPlayerHealth.innerHTML = 'Health: ' + player.health;
-                getEnemyHealth.innerHTML = 'Health: 0';
+
             } else {
-                getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
+
                 //Enemy Attacks
                 let enemyAttackValues = enemyAttack();
                 let totalDamage = enemyAttackValues[0] * enemyAttackValues[1];
@@ -66,10 +65,7 @@ let PlayerMoves = {
                 alert("He hit " + enemyAttackValues[0] + " damage " + enemyAttackValues[1] + " times.");
                 if (player.health <= 0) {
                     alert("Over Game Is");
-                    getPlayerHealth.innerHTML = 'Health: 0';
-                    getEnemyHealth.innerHTML = 'Health: 0' + enemy.health;
-                } else {
-                    getPlayerHealth.innerHTML = 'Health: ' + player.health;
+
                 }
             }
         }

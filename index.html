@@ -9,48 +9,64 @@
     <link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
     <!--<script src="./assets/javascript/game.js">-->
 
-    </script>
-    <script src="./assets/javascript/gamemanager.js"></script>
-    <script src="./assets/javascript/player.js"></script>
-    <script src="./assets/javascript/enemy.js"></script>
+
     <title>Star Wars</title>
+
 </head>
 
 <body>
     <div class="header">
-        <p>Play the greatest RPG ever to be made!</p>
-        <h2>Choose your character</h2>
+        <div class="logo-holder">
+            <img class="star-logo" src="./assets/images/starwars-logo.png" alt="Star Wars Logo">
+        </div>
+        <p></p>
+        <h2>A rebel, you must become..</h2>
     </div>
     <div class="interface">
-        <a href="#" onclick="gameManager.setGameStart('Yoda')">
-            <img class="img-avatar" src="./assets/images/player/yoda.png" alt="Yoda">
-            <div>
-                <h3>Yoda</h3>
-                <p>Don't mess with this guy. He may look old... not so much!</p>
-            </div>
-        </a>
-        <a href="#" onclick="gameManager.setGameStart('Luke')">
-            <img src="./assets/images/player/luke.png" alt="Luke Skywalker">
-            <div>
-                <h3>Luke Skywalker</h3>
-                <p>Young, dumb, and full of Force!</p>
-            </div>
-        </a>
-        <a href="#" onclick="gameManager.setGameStart('Chewy')">
-            <img src="./assets/images/player/chewy.png" alt="Chewbacha">
-            <div>
-                <h3>Chewbacha</h3>
-                <p>Bigfoot??</p>
-            </div>
-        </a>
-        <a href="#" onclick="gameManager.setGameStart('Solo')">
-            <img src="./assets/images/player/solo.png" alt="Han Solo">
-            <div>
-                <h3>Han Solo</h3>
-                <p>You call him Docta Jones Lady!</p>
-            </div>
-        </a>
-
+        <div class="character-box" data-character="Yoda">
+            <a href="#">
+                <div class="char-holder">
+                    <img class="img-avatar" src="./assets/images/player/yoda.png" alt="Yoda">
+                </div>
+                <div>
+                    <h3>Yoda</h3>
+                    <p>Don't mess with this guy. He may look old... not so much!</p>
+                </div>
+            </a>
+        </div>
+        <div class="character-box" data-character="Luke">
+            <a href="#">
+                <div class="char-holder">
+                    <img class="img-avatar" src="./assets/images/player/luke.png" alt="Luke Skywalker">
+                </div>
+                <div>
+                    <h3>Luke Skywalker</h3>
+                    <p>Young, dumb, and full of Force!</p>
+                </div>
+            </a>
+        </div>
+        <div class="character-box" data-character="Chewy">
+            <a href="#">
+                <div class="char-holder">
+                    <img class="img-avatar" src="./assets/images/player/chewy.png" alt="Chewy">
+                </div>
+                <div>
+                    <h3>Chewbacha</h3>
+                    <p>Bigfoot??</p>
+                </div>
+            </a>
+        </div>
+        <div class="character-box" data-character="Solo">
+            <a href="#">
+                <div class="char-holder">
+                    <img class="img-avatar" src="./assets/images/player/solo.png" alt="Han Solo">
+                </div>
+                <div>
+                    <h3>Han Solo</h3>
+                    <p>You call him Docta Jones Lady!</p>
+                </div>
+            </a>
+        </div>
     </div>
     <div class="actions">
 
@@ -60,6 +76,28 @@
     </div>
     <div class="enemy">
 
+        <div class="character-box">
+            <a href="#" onclick="gameManager.setGameStart('darth')">
+                <div class="char-holder">
+                    <img class="img-avatar" src="./assets/images/enemies/darth.png" alt="Darth Vader">
+                </div>
+                <div>
+                    <h3>Darth Vader</h3>
+                    <p>The results are in... You ARE the father!</p>
+                </div>
+            </a>
+        </div>
+        <div class="character-box">
+            <a href="#" onclick="gameManager.setGameStart('fett')">
+                <div class="char-holder">
+                    <img class="img-avatar" src="./assets/images/enemies/fett.png" alt="Boba Fett">
+                </div>
+                <div>
+                    <h3>Boba Fett</h3>
+                    <p>I don't know who he is but whoop him anyways.</p>
+                </div>
+            </a>
+        </div>
     </div>
     <!--
 
@@ -173,6 +211,11 @@
         <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/370024922&color=%234beaff&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
     </div>-->
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/gamemanager.js"></script>
+    <script src="./assets/javascript/player.js"></script>
+    <script src="./assets/javascript/enemy.js"></script>
 </body>
 
 </html>
